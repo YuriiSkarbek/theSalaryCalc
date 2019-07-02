@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="uk-ua">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,7 +8,9 @@
     <title>Калькулятор зарплати</title>
     <link rel="stylesheet" href="styles/style.css">
     <script src="scripts/main.js"></script>
+    <script src="scripts/calc.js"></script>
 </head>
+
 <body>
     <header>
         <div class="logo">
@@ -20,16 +23,31 @@
             </div>
         </div>
         <div id="exchangerates">
-            <div>EUR: <span id="exchangerate_EUR-buy"> </span> / <span id="exchangerate_EUR-sale"> </span> </div> 
-            <div>USD: <span id="exchangerate_USD-buy"> </span> / <span id="exchangerate_USD-sale"> </span> </div> 
-            <div>RUR: <span id="exchangerate_RUR-buy"> </span> / <span id="exchangerate_RUR-sale"> </span> </div> 
+            <div>EUR: <span id="exchangerate_EUR-buy"> </span> / <span id="exchangerate_EUR-sale"> </span> </div>
+            <div>USD: <span id="exchangerate_USD-buy"> </span> / <span id="exchangerate_USD-sale"> </span> </div>
+            <div>RUR: <span id="exchangerate_RUR-buy"> </span> / <span id="exchangerate_RUR-sale"> </span> </div>
         </div>
     </header>
     <main>
         <div class="calc-container">
-
+            <div class="calc_row">
+                <span> Оклад в місяць: </span> <input type="number" id="fullSalary" value="6500">
+            </div>
+            <div class="calc_row">
+                <span> Кількість робочих днів в місяць: </span> <input type="number" id="workDays" value="21">
+            </div>
+            <div class="calc_row">
+                <span> Скільки годин в робочому дні: </span> <input type="number" id="workHour" value="8">
+            </div>
+            <div class="calc_row">
+                <input type="checkbox" id="tax"> <span> Відняти податки (ПДФО -18%, військовий збір -1.5%) </span>
+            </div>
+            <div class="calc_row">
+                <button onclick="calculate()"> Розрахувати </button>
+            </div>
         </div>
     </main>
-    
+
 </body>
+
 </html>

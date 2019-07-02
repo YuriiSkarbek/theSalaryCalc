@@ -26,4 +26,3 @@ fetch(exchangeRatesApiUrl)
         document.getElementById('exchangerates').style.display = 'none';
     });
 
-    console.log('RUR: ', this.RUR_buy)
