@@ -1,16 +1,16 @@
 @import url('https://fonts.googleapis.com/css?family=Open+Sans&display=swap');
 
-*{
+* {
     margin: 0;
     padding: 0;
     font-family: 'Open Sans', sans-serif;
 }
 
-body{
+body {
     background-image: url('../img/bg.png');
 }
 
-header{
+header {
     display: flex;
     height: 60px;
     justify-content: space-between;
@@ -19,18 +19,18 @@ header{
     background-color: rgba(255, 255, 255, .8)
 }
 
-.logo{
+.logo {
     display: flex;
     margin: 0 10px 0 50px;
     padding: 5px 0;
     box-sizing: border-box;
 }
 
-.logo_icon img{
+.logo_icon img {
     height: 100%;
 }
 
-.logo_text{
+.logo_text {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -39,8 +39,78 @@ header{
     line-height: 1.2em;
 }
 
-#exchangerates{
+#exchangerates {
     display: none;
     font-size: 14px;
     margin: 0 50px 0 10px;
+}
+
+main {
+    display: flex;
+    justify-content: space-around;
+    width: 95%;
+    margin: 20px auto;
+}
+
+section.main-left {
+    width: 30%;
+}
+
+section.main-right {
+    width: 70%;
+}
+
+.sidebar {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-sizing: border-box;
+    background-color: rgba(255, 255, 255, .8);
+    padding: 10px 0;
+    margin: 0 20px;
+}
+
+.sidebar_btn {
+    width: 96%;
+    border: 3px solid rgba(116, 176, 39, .7);
+    margin-bottom: 15px;
+    padding: 7px 15px;
+    box-sizing: border-box;
+    text-align: center;
+    cursor: pointer;
+    color: rgba(0, 0, 0, .7);
+    transition: .2s;
+    text-transform: uppercase;
+    font-size: 14px;
+}
+
+.sidebar_btn:hover {
+    border: 3px solid rgba(116, 176, 39, .8);
+    color: rgba(0, 0, 0, .9);
+    -webkit-box-shadow: 0px 0px 18px -5px rgba(128,128,128,1);
+-moz-box-shadow: 0px 0px 18px -5px rgba(128,128,128,1);
+box-shadow: 0px 0px 18px -5px rgba(128,128,128,1);
+}
+
+.sidebar_btn-active {
+    border: 3px solid rgba(116, 176, 39, 1);
+    color: rgba(0, 0, 0, 1);
+    -webkit-box-shadow: 0px 0px 18px -5px rgba(128,128,128,1);
+    -moz-box-shadow: 0px 0px 18px -5px rgba(128,128,128,1);
+    box-shadow: 0px 0px 18px -5px rgba(128,128,128,1);
+}
+
+.calc-container {
+    background-color: rgba(255, 255, 255, .8);
+    margin: 0 20px;
+}
+
+.calc-title {
+    font-size: 24px;
+    text-align: center;
+    padding: 20px 0;
+    text-transform: uppercase;
+    box-sizing: border-box;
+    color: rgba(116, 176, 39, 1);
+    font-weight: 900;
 }

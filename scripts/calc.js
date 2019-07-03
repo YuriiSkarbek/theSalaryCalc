@@ -19,6 +19,7 @@ function calculate() {
         var resultForDay = fullSalary.value / workDays.value;
         var resultForHour = resultForDay / workHour.value;
         console.log('_______________________________ ');
+        console.log('Оклад: ', fullSalary.value);
         console.log('Оплата в день: ', resultForDay.toFixed(2));
         console.log('Оплата в годину: ', resultForHour.toFixed(2));
     }

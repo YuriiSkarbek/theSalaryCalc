@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="styles/style.css">
     <script src="scripts/main.js"></script>
     <script src="scripts/calc.js"></script>
+    <script src="scripts/menu.js"></script>
 </head>
 
 <body>
@@ -29,25 +30,51 @@
         </div>
     </header>
     <main>
-        <div class="calc-container">
-            <div class="calc_row">
-                <span> Оклад в місяць: </span> <input type="number" id="fullSalary" value="6500">
+        <section class="main-left">
+            <div class="sidebar">
+                <div id="calcOfficialSalary-btn" class="sidebar_btn sidebar_btn-active" onclick="getOfficialSalary()">
+                    <span class="sidebar_btn-text">
+                        Калькулятор офіційної зарплати
+                    </span>
+                </div>
+                <div id="calcNonOfficialSalary-btn" class="sidebar_btn" onclick="getNonOfficialSalary()">
+                    <span class="sidebar_btn-text">
+                        Калькулятор зарплати в конверті
+                    </span>
+                </div>
             </div>
-            <div class="calc_row">
-                <span> Кількість робочих днів в місяць: </span> <input type="number" id="workDays" value="21">
+        </section>
+        <section class="main-right">
+            <div class="calc-container">
+                <div id="calcOfficialSalary" style="display: block;">
+                    <div class="calc-title">
+                        Калькулятор офіційної зарплати
+                    </div>
+                    <div class="calc-row">
+                        <span> Оклад в місяць: </span> <input type="number" id="fullSalary" value="6500">
+                    </div>
+                    <div class="calc-row">
+                        <span> Кількість робочих днів в місяць: </span> <input type="number" id="workDays" value="21">
+                    </div>
+                    <div class="calc-row">
+                        <span> Скільки годин в робочому дні: </span> <input type="number" id="workHour" value="8">
+                    </div>
+                    <div class="calc-row">
+                        <input type="checkbox" id="tax"> <span> Відняти податки (ПДФО -18%, військовий збір -1.5%)
+                        </span>
+                    </div>
+                    <div class="calc-row">
+                        <button onclick="calculate()"> Розрахувати </button>
+                    </div>
+                </div>
+                <div id="calcNonOfficialSalary" style="display: none;">
+                    <div class="calc-title">
+                        Калькулятор зарплати в конверті
+                    </div>
+                </div>
             </div>
-            <div class="calc_row">
-                <span> Скільки годин в робочому дні: </span> <input type="number" id="workHour" value="8">
-            </div>
-            <div class="calc_row">
-                <input type="checkbox" id="tax"> <span> Відняти податки (ПДФО -18%, військовий збір -1.5%) </span>
-            </div>
-            <div class="calc_row">
-                <button onclick="calculate()"> Розрахувати </button>
-            </div>
-        </div>
+        </section>
     </main>
-
 </body>
 
 </html>
