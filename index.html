@@ -7,9 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Калькулятор зарплати</title>
     <link rel="stylesheet" href="styles/style.css">
-    <script src="scripts/main.js"></script>
-    <script src="scripts/calc.js"></script>
-    <script src="scripts/menu.js"></script>
+    <link rel="stylesheet" href="styles/modal.css">
 </head>
 
 <body>
@@ -60,11 +58,7 @@
                         <span> Скільки годин в робочому дні: </span> <input type="number" id="workHour" value="8">
                     </div>
                     <div class="calc-row">
-                        <input type="checkbox" id="tax"> <span> Відняти податки (ПДФО -18%, військовий збір -1.5%)
-                        </span>
-                    </div>
-                    <div class="calc-row">
-                        <button onclick="calculate()"> Розрахувати </button>
+                        <button onclick="calculateOfficialSalary()" id="result-btn"> Розрахувати </button>
                     </div>
                 </div>
                 <div id="calcNonOfficialSalary" style="display: none;">
@@ -75,6 +69,24 @@
             </div>
         </section>
     </main>
+    <div id="result-modal" class="modal">
+        <!-- Modal content -->
+        <div class="modal-content">
+            <div class="modal-header">
+                <span class="close">&times;</span>
+                <h2>РЕЗУЛЬТАТИ РОЗРАХУНКУ</h2>
+            </div>
+            <div class="modal-body">
+                <span> Ваш оклад: </span> <span id="modal-fullSalary"> 666 </span> <br>
+                <span> На руки: </span> <span id="modal-salaryOnHands"> 555 </span> <br>
+                <span> Оплата за робочий день: </span> <span id="modal-resultForDay"> 111 </span> <br>
+                <span> Оплата за робочу годину: </span> <span id="modal-resultForHour"> 11 </span>
+            </div>
+        </div>
+    </div>
+    <script src="scripts/main.js"></script>
+    <script src="scripts/calc.js"></script>
+    <script src="scripts/menu.js"></script>
 </body>
 
 </html>
