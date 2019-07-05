@@ -9,13 +9,6 @@ var modalSalaryOnHands = document.getElementById("modal-salaryOnHands");
 var modalResultForDay = document.getElementById("modal-resultForDay");
 var modalResultForHour = document.getElementById("modal-resultForHour");
 
-function cleanModal(){
-	modalFullSalary.innerHTML = '';
-	modalSalaryOnHands.innerHTML = '';
-	modalResultForDay.innerHTML = '';
-	modalResultForHour.innerHTML = '';
-	
-}
 function calculateOfficialSalary() {
 	var taxForSalary = fullSalary.value / 100 * 19.5;
 	var salaryOnHands = fullSalary.value - taxForSalary;
@@ -69,4 +62,11 @@ window.onclick = function (event) {
 	if (event.target == modal) {
 		modal.style.display = "none";
 	}
+}
+
+function cleanModal(){
+	modalFullSalary.innerHTML = '';
+	modalSalaryOnHands.innerHTML = '';
+	modalResultForDay.innerHTML = '';
+	modalResultForHour.innerHTML = '';
 }

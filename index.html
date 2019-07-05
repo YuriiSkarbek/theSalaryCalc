@@ -8,6 +8,8 @@
     <title>Калькулятор зарплати</title>
     <link rel="stylesheet" href="styles/style.css">
     <link rel="stylesheet" href="styles/modal.css">
+    <!-- include fontawesome -->
+    <script src="https://kit.fontawesome.com/0f014cf8cb.js"></script>
 </head>
 
 <body>
@@ -43,22 +45,34 @@
             </div>
         </section>
         <section class="main-right">
-            <div class="calc-container">
-                <div id="calcOfficialSalary" style="display: block;">
+            <div class="right-container">
+                <div id="calcOfficialSalary" class="calc-container" style="display: block;">
                     <div class="calc-title">
                         Калькулятор офіційної зарплати
                     </div>
-                    <div class="calc-row">
-                        <span> Оклад в місяць: </span> <input type="number" id="fullSalary" value="6500">
+                    <div class="calc_input">
+                        <span class="calc_input-icon">
+                            <i class="fas fa-wallet"></i>
+                        </span>
+                          <input type="number" id="fullSalary" value="6500"> 
+                          <span class="calc_input-text"> Оклад в місяць </span>
                     </div>
-                    <div class="calc-row">
-                        <span> Кількість робочих днів в місяць: </span> <input type="number" id="workDays" value="21">
+                    <div class="calc_input">
+                        <span class="calc_input-icon">
+                            <i class="fas fa-business-time"></i>
+                        </span>
+                        <input type="number" id="workDays" value="21">
+                        <span class="calc_input-text"> Кількість робочих днів в місяць </span> 
                     </div>
-                    <div class="calc-row">
-                        <span> Скільки годин в робочому дні: </span> <input type="number" id="workHour" value="8">
+                    <div class="calc_input">
+                        <span class="calc_input-icon">
+                            <i class="fas fa-hourglass-half"></i>
+                        </span>
+                        <input type="number" id="workHour" value="8">
+                        <span class="calc_input-text"> Скільки годин в робочому дні </span> 
                     </div>
-                    <div class="calc-row">
-                        <button onclick="calculateOfficialSalary()" id="result-btn"> Розрахувати </button>
+                    <div>
+                        <button onclick="calculateOfficialSalary()" id="result-btn" class="result-btn"> Розрахувати </button>
                     </div>
                 </div>
                 <div id="calcNonOfficialSalary" style="display: none;">
