@@ -30,20 +30,18 @@
         </div>
     </header>
     <main>
-        <section class="main-left">
-            <div class="sidebar">
-                <div id="calcOfficialSalary-btn" class="sidebar_btn sidebar_btn-active" onclick="getOfficialSalary()">
-                    <span class="sidebar_btn-text">
-                        Калькулятор офіційної зарплати
-                    </span>
-                </div>
-                <div id="calcNonOfficialSalary-btn" class="sidebar_btn" onclick="getNonOfficialSalary()">
-                    <span class="sidebar_btn-text">
-                        Калькулятор зарплати в конверті
-                    </span>
-                </div>
+        <aside>
+            <div id="calcOfficialSalary-btn" class="sidebar_btn sidebar_btn-active" onclick="getOfficialSalary()">
+                <span class="sidebar_btn-text">
+                    Калькулятор офіційної зарплати
+                </span>
             </div>
-        </section>
+            <div id="calcNonOfficialSalary-btn" class="sidebar_btn" onclick="getNonOfficialSalary()">
+                <span class="sidebar_btn-text">
+                    Калькулятор зарплати в конверті
+                </span>
+            </div>
+        </aside>
         <section class="main-right">
             <div class="right-container">
                 <div id="calcOfficialSalary" class="calc-container" style="display: block;">
@@ -54,25 +52,26 @@
                         <span class="calc_input-icon">
                             <i class="fas fa-wallet"></i>
                         </span>
-                          <input type="number" id="fullSalary" value="6500"> 
-                          <span class="calc_input-text"> Оклад в місяць </span>
+                        <input type="number" id="fullSalary" placeholder="6500">
+                        <span class="calc_input-text"> Оклад в місяць </span>
                     </div>
                     <div class="calc_input">
                         <span class="calc_input-icon">
                             <i class="fas fa-business-time"></i>
                         </span>
-                        <input type="number" id="workDays" value="21">
-                        <span class="calc_input-text"> Кількість робочих днів в місяць </span> 
+                        <input type="number" id="workDays" placeholder="21">
+                        <span class="calc_input-text"> Кількість робочих днів в місяць </span>
                     </div>
                     <div class="calc_input">
                         <span class="calc_input-icon">
                             <i class="fas fa-hourglass-half"></i>
                         </span>
-                        <input type="number" id="workHour" value="8">
-                        <span class="calc_input-text"> Скільки годин в робочому дні </span> 
+                        <input type="number" id="workHour" placeholder="8">
+                        <span class="calc_input-text"> Скільки годин в робочому дні </span>
                     </div>
                     <div>
-                        <button onclick="calculateOfficialSalary()" id="result-btn" class="result-btn"> Розрахувати </button>
+                        <button onclick="calculateOfficialSalary()" id="result-btn" class="result-btn"> Розрахувати
+                        </button>
                     </div>
                 </div>
                 <div id="calcNonOfficialSalary" style="display: none;">
@@ -92,9 +91,9 @@
             </div>
             <div class="modal-body">
                 <span> Ваш оклад: </span> <span id="modal-fullSalary"> *не вказано* </span> <br>
-                <span> На руки: </span> <span id="modal-salaryOnHands">  *не вказано*  </span> <br>
-                <span> Оплата за робочий день: </span> <span id="modal-resultForDay">  *не вказано*  </span> <br>
-                <span> Оплата за робочу годину: </span> <span id="modal-resultForHour">  *не вказано*  </span>
+                <span> На руки: </span> <span id="modal-salaryOnHands"> *не вказано* </span> <br>
+                <span> Оплата за робочий день: </span> <span id="modal-resultForDay"> *не вказано* </span> <br>
+                <span> Оплата за робочу годину: </span> <span id="modal-resultForHour"> *не вказано* </span>
             </div>
         </div>
     </div>
