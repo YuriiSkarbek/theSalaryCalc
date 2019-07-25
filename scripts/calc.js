@@ -1,7 +1,7 @@
 // init inputs on calculators
-var fullSalary = document.getElementById("fullSalary");
-var workDays = document.getElementById("workDays");
-var workHour = document.getElementById("workHour");
+var fullSalary = document.getElementById("full-salary");
+var workDays = document.getElementById("work-days");
+var workHour = document.getElementById("work-hour");
 
 // init areas on modal for insert result
 var modalFullSalary = document.getElementById("modal-fullSalary");
@@ -14,13 +14,13 @@ function calculateOfficialSalary() {
 	var salaryOnHands = fullSalary.value - taxForSalary;
 
 	if (workDays.value == '') {
-		console.log('workDays is null');
+		console.log('work-days is null');
 	} else {
 		var resultForDay = salaryOnHands / workDays.value;
 		modalResultForDay.innerHTML = resultForDay.toFixed(2);
 
 		if (workHour.value == '') {
-			console.log('workHour is null');
+			console.log('work-hour is null');
 		} else {
 			var resultForHour = resultForDay / workHour.value;
 			modalResultForHour.innerHTML = resultForHour.toFixed(2);
@@ -28,28 +28,16 @@ function calculateOfficialSalary() {
 
 	}
 
-
 	modalFullSalary.innerHTML = fullSalary.value;
 	modalSalaryOnHands.innerHTML = salaryOnHands.toFixed(2);
 
-
-
-
-	// var resultForDay = fullSalary.value / workDays.value;
-	// var resultForHour = resultForDay / workHour.value;
-	// console.log('_______________________________ ');
-	// console.log('Оклад: ', fullSalary.value);
-	// console.log('Оплата в день: ', resultForDay.toFixed(2));
-	// console.log('Оплата в годину: ', resultForHour.toFixed(2));
-
-	// Open the modal
 	modal.style.display = "block";
 	
 }
 
 // Modal with the result of the calculation
-var modal = document.getElementById("result-modal");
-var btn = document.getElementById("result-btn");
+var modal = document.getElementById("result__modal");
+var btn = document.getElementById("result__btn");
 var close = document.getElementsByClassName("close")[0];
 
 close.onclick = function () {

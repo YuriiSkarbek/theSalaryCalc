@@ -29,7 +29,7 @@
 }
 
 /* Modal Content */
-.modal-content {
+.modal__content {
     position: relative;
     background-color: #fefefe;
     margin: auto;
@@ -42,14 +42,14 @@
 }
 
 /* Modal Header */
-.modal-header {
+.modal__header {
     padding: 5px 16px;
     background-color: #74b027;
     color: white;
 }
 
 /* Modal Body */
-.modal-body {
+.modal__body {
     padding: 2px 16px;
 }
 

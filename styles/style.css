@@ -26,11 +26,11 @@ header {
     box-sizing: border-box;
 }
 
-.logo_icon img {
+.logo__icon img {
     height: 100%;
 }
 
-.logo_text {
+.logo__text {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -39,20 +39,21 @@ header {
     line-height: 1.2em;
 }
 
-#exchangerates {
+#exchange-rates {
     display: none;
     font-size: 14px;
     margin: 0 50px 0 10px;
 }
 
-main {
+.main {
     display: flex;
     justify-content: space-around;
     width: 95%;
     margin: 20px auto;
+    padding: 0 20px;
 }
 
-aside {
+.sidebar {
     width: 30%;
     display: flex;
     flex-direction: column;
@@ -63,15 +64,12 @@ aside {
     margin: 0 20px;
 }
 
-section.main-right {
+section.content {
     width: 70%;
+    background-color: rgba(255, 255, 255, .8);
 }
 
-.sidebar {
-    
-}
-
-.sidebar_btn {
+.sidebar__btn {
     width: 96%;
     border: 3px solid rgba(116, 176, 39, .7);
     margin-bottom: 15px;
@@ -86,7 +84,7 @@ section.main-right {
     border-radius: 2px;
 }
 
-.sidebar_btn:hover {
+.sidebar__btn:hover {
     border: 3px solid rgba(116, 176, 39, .8);
     color: rgba(0, 0, 0, .9);
     -webkit-box-shadow: 0px 0px 18px -5px rgba(128, 128, 128, 1);
@@ -94,18 +92,12 @@ section.main-right {
     box-shadow: 0px 0px 18px -5px rgba(128, 128, 128, 1);
 }
 
-.sidebar_btn-active {
+.sidebar__btn-active {
     border: 3px solid rgba(116, 176, 39, 1);
     color: rgba(0, 0, 0, 1);
     -webkit-box-shadow: 0px 0px 18px -5px rgba(128, 128, 128, 1);
     -moz-box-shadow: 0px 0px 18px -5px rgba(128, 128, 128, 1);
     box-shadow: 0px 0px 18px -5px rgba(128, 128, 128, 1);
-}
-
-.right-container {
-    background-color: rgba(255, 255, 255, .8);
-    margin: 0 20px;
-
 }
 
 .calc-container {
@@ -124,13 +116,13 @@ section.main-right {
     font-weight: 900;
 }
 
-.calc_input {
+.calc__input {
     display: flex;
     width: 100%;
     margin-bottom: 15px;
 }
 
-.calc_input .calc_input-text {
+.calc__input .calc__input-text {
     display: flex;
     align-items: center;
     font-size: 18px;
@@ -148,7 +140,7 @@ input[type=number]::-webkit-inner-spin-button {
     -webkit-appearance: none;
 }
 
-.calc_input-icon {
+.calc__input-icon {
     font-size: 22px;
     /* icon size */
     display: flex;

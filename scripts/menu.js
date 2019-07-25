@@ -1,17 +1,15 @@
 function getOfficialSalary(){
-    document.getElementById("calcOfficialSalary-btn").classList.add("sidebar_btn-active");
-    document.getElementById("calcNonOfficialSalary-btn").classList.remove("sidebar_btn-active");
+    document.getElementById("calc-official__btn").classList.add("sidebar__btn-active");
+    document.getElementById("calc-non-official__btn").classList.remove("sidebar__btn-active");
 
-    document.getElementById("calcOfficialSalary").style.display = 'block';
-    document.getElementById("calcNonOfficialSalary").style.display = 'none';
+    document.getElementById("calc-official").style.display = 'block';
+    document.getElementById("calc-non-official").style.display = 'none';
 }
 
 function getNonOfficialSalary(){
-    document.getElementById("calcNonOfficialSalary-btn").classList.add("sidebar_btn-active");
-    document.getElementById("calcOfficialSalary-btn").classList.remove("sidebar_btn-active");
+    document.getElementById("calc-non-official__btn").classList.add("sidebar__btn-active");
+    document.getElementById("calc-official__btn").classList.remove("sidebar__btn-active");
     
-    document.getElementById("calcNonOfficialSalary").style.display = 'block';
-    document.getElementById("calcOfficialSalary").style.display = 'none';
-    
-    
+    document.getElementById("calc-non-official").style.display = 'block';
+    document.getElementById("calc-official").style.display = 'none';
 }

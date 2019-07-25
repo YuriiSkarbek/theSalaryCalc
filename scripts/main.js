@@ -20,9 +20,9 @@ fetch(exchangeRatesApiUrl)
         document.getElementById('exchangerate_RUR-buy').innerHTML = RUR_buy;
 
         // show exchange rates in header if request was success
-        document.getElementById('exchangerates').style.display = 'block';
+        document.getElementById('exchange-rates').style.display = 'block';
     }).catch(err => {
         console.error('cannot get exchange rates from PrivatBank APi')
-        document.getElementById('exchangerates').style.display = 'none';
+        document.getElementById('exchange-rates').style.display = 'none';
     });
 

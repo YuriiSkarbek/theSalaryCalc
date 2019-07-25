@@ -15,81 +15,81 @@
 <body>
     <header>
         <div class="logo">
-            <div class="logo_icon">
+            <div class="logo__icon">
                 <img src="img/logo.png" alt="Калькулятор розрахунку заробітної плати">
             </div>
-            <div class="logo_text">
+            <div class="logo__text">
                 <span>Калькулятор</span>
                 <span>зарплати</span>
             </div>
         </div>
-        <div id="exchangerates">
-            <div>EUR: <span id="exchangerate_EUR-buy"> </span> / <span id="exchangerate_EUR-sale"> </span> </div>
-            <div>USD: <span id="exchangerate_USD-buy"> </span> / <span id="exchangerate_USD-sale"> </span> </div>
-            <div>RUR: <span id="exchangerate_RUR-buy"> </span> / <span id="exchangerate_RUR-sale"> </span> </div>
+        <div id="exchange-rates">
+            <div>EUR: <span id="exchangerate-EUR-buy"> </span> / <span id="exchangerate-EUR-sale"> </span> </div>
+            <div>USD: <span id="exchangerate-USD-buy"> </span> / <span id="exchangerate-USD-sale"> </span> </div>
+            <div>RUR: <span id="exchangerate-RUR-buy"> </span> / <span id="exchangerate-RUR-sale"> </span> </div>
         </div>
     </header>
-    <main>
-        <aside>
-            <div id="calcOfficialSalary-btn" class="sidebar_btn sidebar_btn-active" onclick="getOfficialSalary()">
-                <span class="sidebar_btn-text">
+    <main class="main">
+        <aside class="sidebar">
+            <div id="calc-official__btn" class="sidebar__btn sidebar__btn-active" onclick="getOfficialSalary()">
+                <span class="sidebar__btn-text">
                     Калькулятор офіційної зарплати
                 </span>
             </div>
-            <div id="calcNonOfficialSalary-btn" class="sidebar_btn" onclick="getNonOfficialSalary()">
-                <span class="sidebar_btn-text">
+            <div id="calc-non-official__btn" class="sidebar__btn" onclick="getNonOfficialSalary()">
+                <span class="sidebar__btn-text">
                     Калькулятор зарплати в конверті
                 </span>
             </div>
         </aside>
-        <section class="main-right">
-            <div class="right-container">
-                <div id="calcOfficialSalary" class="calc-container" style="display: block;">
-                    <div class="calc-title">
+        <section class="content">
+            <div class="content__container">
+                <div id="calc-official" class="calc-container" style="display: block;">
+                    <div class="calc__title">
                         Калькулятор офіційної зарплати
                     </div>
-                    <div class="calc_input">
-                        <span class="calc_input-icon">
+                    <div class="calc__input">
+                        <span class="calc__input-icon">
                             <i class="fas fa-wallet"></i>
                         </span>
-                        <input type="number" id="fullSalary" placeholder="6500">
-                        <span class="calc_input-text"> Оклад в місяць </span>
+                        <input type="number" id="full-salary" placeholder="6500">
+                        <span class="calc__input-text"> Оклад в місяць </span>
                     </div>
-                    <div class="calc_input">
-                        <span class="calc_input-icon">
+                    <div class="calc__input">
+                        <span class="calc__input-icon">
                             <i class="fas fa-business-time"></i>
                         </span>
-                        <input type="number" id="workDays" placeholder="21">
-                        <span class="calc_input-text"> Кількість робочих днів в місяць </span>
+                        <input type="number" id="work-days" placeholder="21">
+                        <span class="calc__input-text"> Кількість робочих днів в місяць </span>
                     </div>
-                    <div class="calc_input">
-                        <span class="calc_input-icon">
+                    <div class="calc__input">
+                        <span class="calc__input-icon">
                             <i class="fas fa-hourglass-half"></i>
                         </span>
-                        <input type="number" id="workHour" placeholder="8">
-                        <span class="calc_input-text"> Скільки годин в робочому дні </span>
+                        <input type="number" id="work-hour" placeholder="8">
+                        <span class="calc__input-text"> Скільки годин в робочому дні </span>
                     </div>
                     <div>
-                        <button onclick="calculateOfficialSalary()" id="result-btn" class="result-btn"> Розрахувати
+                        <button onclick="calculateOfficialSalary()" id="result__btn" class="result__btn"> Розрахувати
                         </button>
                     </div>
                 </div>
-                <div id="calcNonOfficialSalary" style="display: none;">
-                    <div class="calc-title">
+                <div id="calc-non-official" style="display: none;">
+                    <div class="calc__title">
                         Калькулятор зарплати в конверті
                     </div>
                 </div>
             </div>
         </section>
     </main>
-    <div id="result-modal" class="modal">
+    <div id="result__modal" class="modal">
         <!-- Modal content -->
-        <div class="modal-content">
-            <div class="modal-header">
+        <div class="modal__content">
+            <div class="modal__header">
                 <span class="close">&times;</span>
                 <h2>РЕЗУЛЬТАТИ РОЗРАХУНКУ</h2>
             </div>
-            <div class="modal-body">
+            <div class="modal__body">
                 <span> Ваш оклад: </span> <span id="modal-fullSalary"> *не вказано* </span> <br>
                 <span> На руки: </span> <span id="modal-salaryOnHands"> *не вказано* </span> <br>
                 <span> Оплата за робочий день: </span> <span id="modal-resultForDay"> *не вказано* </span> <br>
