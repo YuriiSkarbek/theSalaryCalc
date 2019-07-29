@@ -25,14 +25,23 @@ function calculateOfficialSalary() {
 			var resultForHour = resultForDay / workHour.value;
 			modalResultForHour.innerHTML = resultForHour.toFixed(2);
 		}
-
 	}
 
+	// fill the result in modal
 	modalFullSalary.innerHTML = fullSalary.value;
 	modalSalaryOnHands.innerHTML = salaryOnHands.toFixed(2);
 
 	modal.style.display = "block";
-	
+}
+
+// you can't enter the workHour if workDays is null
+workDays.oninput = function(){
+	if(workDays.value != ''){
+		workHour.disabled = false;
+	}
+	else{
+		workHour.disabled = true;
+	}
 }
 
 // Modal with the result of the calculation
