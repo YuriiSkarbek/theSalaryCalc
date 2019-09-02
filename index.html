@@ -13,6 +13,7 @@
 </head>
 
 <body>
+    <!-- Block of header  -->
     <header>
         <div class="logo">
             <div class="logo__icon">
@@ -29,7 +30,10 @@
             <div>RUR: <span id="exchangerate-RUR-buy"> </span> / <span id="exchangerate-RUR-sale"> </span> </div>
         </div>
     </header>
+    <!-- END Block of header  -->
+    
     <main class="main">
+        <!-- Block of sidebar -->
         <aside class="sidebar">
             <div id="calc-official__btn" class="sidebar__btn sidebar__btn-active" onclick="getOfficialSalary()">
                 <span class="sidebar__btn-text">
@@ -42,8 +46,11 @@
                 </span>
             </div>
         </aside>
+        <!-- END  Block of sidebar -->
+
         <section class="content">
             <div class="content__container">
+                <!-- Block of official calculation -->
                 <div id="calc-official" class="calc-container" style="display: block;">
                     <div class="calc__title">
                         Калькулятор офіційної зарплати
@@ -74,14 +81,19 @@
                         </button>
                     </div>
                 </div>
+                <!-- END Block of official calculation -->
+
+                <!-- Block of NON-official calculation -->
                 <div id="calc-non-official" style="display: none;">
                     <div class="calc__title">
                         Калькулятор зарплати в конверті
                     </div>
                 </div>
+                <!-- END Block of NON-official calculation -->
             </div>
         </section>
     </main>
+    <!-- Block of calculation result -->
     <div id="result__modal" class="modal">
         <!-- Modal content -->
         <div class="modal__content">
@@ -97,6 +109,8 @@
             </div>
         </div>
     </div>
+    <!-- END Block of calculation result -->
+
     <script src="scripts/main.js"></script>
     <script src="scripts/calc.js"></script>
     <script src="scripts/menu.js"></script>
