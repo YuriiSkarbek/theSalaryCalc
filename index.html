@@ -6,8 +6,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Калькулятор зарплати</title>
-    <link rel="stylesheet" href="styles/style.css">
+    <link rel="stylesheet" href="styles/header.css">
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/sidebar.css">
     <link rel="stylesheet" href="styles/modal.css">
+    <link rel="stylesheet" href="styles/global.css">
     <!-- include fontawesome -->
     <script src="https://kit.fontawesome.com/0f014cf8cb.js"></script>
 </head>
@@ -32,67 +35,76 @@
     </header>
     <!-- END Block of header  -->
     
-    <main class="main">
+    <div class="page">
         <!-- Block of sidebar -->
         <aside class="sidebar">
-            <div id="calc-official__btn" class="sidebar__btn sidebar__btn-active" onclick="getOfficialSalary()">
-                <span class="sidebar__btn-text">
-                    Калькулятор офіційної зарплати
-                </span>
-            </div>
-            <div id="calc-non-official__btn" class="sidebar__btn" onclick="getNonOfficialSalary()">
-                <span class="sidebar__btn-text">
-                    Калькулятор зарплати в конверті
-                </span>
+            <div class="menu">
+                <div class="menu__links">
+                    <div id="calc-official__btn" class="sidebar__btn sidebar__btn-active" onclick="getOfficialSalary()">
+                        <span class="sidebar__btn-text">
+                            Калькулятор офіційної зарплати
+                        </span>
+                    </div>
+                    <div id="calc-non-official__btn" class="sidebar__btn" onclick="getNonOfficialSalary()">
+                        <span class="sidebar__btn-text">
+                            Калькулятор зарплати в конверті
+                        </span>
+                    </div>
+                </div>
             </div>
         </aside>
         <!-- END  Block of sidebar -->
 
-        <section class="content">
-            <div class="content__container">
-                <!-- Block of official calculation -->
-                <div id="calc-official" class="calc-container" style="display: block;">
-                    <div class="calc__title">
-                        Калькулятор офіційної зарплати
+        <main class="main">
+            <section class="content">
+                <div class="content__container">
+                    <!-- Block of official calculation -->
+                    <div id="calc-official" class="calc-container" style="display: block;">
+                        <div class="calc__title">
+                            Калькулятор офіційної зарплати
+                        </div>
+                        <div class="calc__input">
+                            <span class="calc__input-icon">
+                                <i class="fas fa-wallet"></i>
+                            </span>
+                            <input type="number" id="full-salary" placeholder="6500">
+                            <span class="calc__input-text"> Оклад в місяць </span>
+                        </div>
+                        <div class="calc__input">
+                            <span class="calc__input-icon">
+                                <i class="fas fa-business-time"></i>
+                            </span>
+                            <input type="number" id="work-days" placeholder="21">
+                            <span class="calc__input-text"> Кількість робочих днів в місяць </span>
+                        </div>
+                        <div class="calc__input">
+                            <span class="calc__input-icon">
+                                <i class="fas fa-hourglass-half"></i>
+                            </span>
+                            <input type="number" id="work-hour" placeholder="8" disabled>
+                            <span class="calc__input-text"> Скільки годин в робочому дні </span>
+                        </div>
+                        <div>
+                            <button onclick="calculateOfficialSalary()" id="result__btn" class="result__btn">
+                                Розрахувати
+                            </button>
+                        </div>
                     </div>
-                    <div class="calc__input">
-                        <span class="calc__input-icon">
-                            <i class="fas fa-wallet"></i>
-                        </span>
-                        <input type="number" id="full-salary" placeholder="6500">
-                        <span class="calc__input-text"> Оклад в місяць </span>
-                    </div>
-                    <div class="calc__input">
-                        <span class="calc__input-icon">
-                            <i class="fas fa-business-time"></i>
-                        </span>
-                        <input type="number" id="work-days" placeholder="21">
-                        <span class="calc__input-text"> Кількість робочих днів в місяць </span>
-                    </div>
-                    <div class="calc__input">
-                        <span class="calc__input-icon">
-                            <i class="fas fa-hourglass-half"></i>
-                        </span>
-                        <input type="number" id="work-hour" placeholder="8" disabled>
-                        <span class="calc__input-text"> Скільки годин в робочому дні </span>
-                    </div>
-                    <div>
-                        <button onclick="calculateOfficialSalary()" id="result__btn" class="result__btn"> Розрахувати
-                        </button>
-                    </div>
-                </div>
-                <!-- END Block of official calculation -->
+                    <!-- END Block of official calculation -->
 
-                <!-- Block of NON-official calculation -->
-                <div id="calc-non-official" style="display: none;">
-                    <div class="calc__title">
-                        Калькулятор зарплати в конверті
+                    <!-- Block of NON-official calculation -->
+                    <div id="calc-non-official" style="display: none;">
+                        <div class="calc__title">
+                            Калькулятор зарплати в конверті
+                        </div>
                     </div>
+                    <!-- END Block of NON-official calculation -->
                 </div>
-                <!-- END Block of NON-official calculation -->
-            </div>
-        </section>
-    </main>
+            </section>
+        </main>
+    </div>
+
+
     <!-- Block of calculation result -->
     <div id="result__modal" class="modal">
         <!-- Modal content -->

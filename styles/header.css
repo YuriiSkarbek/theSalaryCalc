@@ -1,0 +1,36 @@
+/* This file included styles for header */
+
+header {
+    display: flex;
+    height: 60px;
+    justify-content: space-between;
+    padding: 5px 0;
+    border-bottom: 1px solid lightgray;
+    background-color: rgba(255, 255, 255, .8)
+}
+
+.logo {
+    display: flex;
+    margin: 0 10px 0 50px;
+    padding: 5px 0;
+    box-sizing: border-box;
+}
+
+.logo__icon img {
+    height: 100%;
+}
+
+.logo__text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-transform: uppercase;
+    font-size: 20px;
+    line-height: 1.2em;
+}
+
+#exchange-rates {
+    display: none;
+    font-size: 14px;
+    margin: 0 50px 0 10px;
+}
