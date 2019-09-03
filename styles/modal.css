@@ -68,3 +68,17 @@
         opacity: 1
     }
 }
+
+@media screen and (max-width: 767px){
+    .modal__content{
+        width: 96%;
+    }
+
+    .modal__header h2{
+        font-size: 16px;
+    }
+
+    .modal__body{
+        font-size: 12px;
+    }
+}

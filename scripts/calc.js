@@ -64,7 +64,7 @@ function calculateNonOfficialSalary() {
 	}
 	// fill the result in modal
 	modalFullSalary.innerHTML = fullSalary_nonOfficial.value;
-	modalSalaryOnHands.innerHTML = salaryOnHands.toFixed(2);
+	modalSalaryOnHands.innerHTML = salaryOnHands;
 	modal.style.display = "block";
 	
 }
