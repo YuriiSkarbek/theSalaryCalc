@@ -5,18 +5,31 @@
     align-items: center;
     box-sizing: border-box;
     background-color: rgba(255, 255, 255, .8);
-    padding: 20px 0;
+    padding: 50px 0;
+    position: relative;
+}
+
+.menu {
+    width: 100%;
+}
+
+.menu__links {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
 }
 
 .sidebar__btn {
-    width: 96%;
-    border: 3px solid rgba(116, 176, 39, .7);
-    margin-bottom: 15px;
-    padding: 7px 15px;
+    width: 100%;
+    border: none;
+    padding: 10px 15px;
     box-sizing: border-box;
     text-align: center;
     cursor: pointer;
     color: rgba(0, 0, 0, .7);
+    background-color: rgb(235, 235, 235);
     transition: .2s;
     text-transform: uppercase;
     font-size: 14px;
@@ -24,17 +37,73 @@
 }
 
 .sidebar__btn:hover {
-    border: 3px solid rgba(116, 176, 39, .8);
-    color: rgba(0, 0, 0, .9);
-    -webkit-box-shadow: 0px 0px 18px -5px rgba(128, 128, 128, 1);
-    -moz-box-shadow: 0px 0px 18px -5px rgba(128, 128, 128, 1);
-    box-shadow: 0px 0px 18px -5px rgba(128, 128, 128, 1);
+    background-color: rgb(202, 202, 202);
 }
 
 .sidebar__btn-active {
-    border: 3px solid rgba(116, 176, 39, 1);
-    color: rgba(0, 0, 0, 1);
-    -webkit-box-shadow: 0px 0px 18px -5px rgba(128, 128, 128, 1);
-    -moz-box-shadow: 0px 0px 18px -5px rgba(128, 128, 128, 1);
-    box-shadow: 0px 0px 18px -5px rgba(128, 128, 128, 1);
+    background-color: rgba(117, 176, 39, 0.753);
+    color: rgb(255, 255, 255);
+}
+
+.sidebar__btn-active:hover {
+    background-color: rgba(117, 176, 39, 0.753);
+    color: rgb(255, 255, 255);
+}
+
+.sidebar__close-btn {
+    font-size: 50px;
+    line-height: 30px;
+    color: rgb(192, 192, 192);
+    padding: 14px 14px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    cursor: pointer;
+    transition: .2s;
+}
+
+.sidebar__close-btn:hover {
+    color: rgb(255, 138, 138);
+}
+
+.sidebar__open-btn{
+    background-color: rgb(255, 255, 255);
+    position: absolute;
+    padding: 0 10px;
+    top: 0;
+    left: 0;
+    font-size: 50px;
+    line-height: 70px;
+    z-index: 2000;
+}
+
+@media screen and (max-width: 1023px) {
+
+    /* The side navigation menu */
+    .sidebar {
+        height: 100%;
+        width: 0;
+        position: fixed;
+        z-index: 1000;
+        top: 0;
+        left: 0;
+        background-color: rgb(44, 44, 44);
+        overflow-x: hidden;
+        padding-top: 70px;
+        transition: 0.3s;
+    }
+
+    .sidebar__btn {
+        width: 100%;
+    }
+
+
+}
+
+@media screen and (max-width: 767px) {
+
+}
+
+@media screen and (max-width: 480px) {
+    
 }

@@ -15,7 +15,7 @@
     <script src="https://kit.fontawesome.com/0f014cf8cb.js"></script>
 </head>
 
-<body>
+<body id="body">
     <!-- Block of header  -->
     <header>
         <div class="logo">
@@ -37,7 +37,7 @@
 
     <div class="page">
         <!-- Block of sidebar -->
-        <aside class="sidebar">
+        <aside class="sidebar" id="sidebar">
             <div class="menu">
                 <div class="menu__links">
                     <div id="calc-official__btn" class="sidebar__btn sidebar__btn-active" onclick="getOfficialSalary()">
@@ -55,82 +55,83 @@
         </aside>
         <!-- END  Block of sidebar -->
 
-        <main class="main">
+        <main class="main" id="main">
+            <div class="sidebar__open-btn" onclick="toggleSidebar()">&#9776;</div>
             <section class="content">
-                    <!-- Block of official calculation -->
-                    <div id="calc-official" class="calc-container" style="display: block;">
-                        <div class="calc__title">
-                            Калькулятор офіційної зарплати
-                        </div>
-                        <div class="calc__input">
-                            <span class="calc__input-icon">
-                                <i class="fas fa-wallet"></i>
-                            </span>
-                            <input type="number" id="full-salary_official" placeholder="6500">
-                            <span class="calc__input-text"> Оклад в місяць </span>
-                        </div>
-                        <div class="calc__input">
-                            <span class="calc__input-icon">
-                                <i class="fas fa-calendar-alt"></i>
-                            </span>
-                            <input type="number" id="work-days_official" placeholder="21">
-                            <span class="calc__input-text"> Кількість робочих днів в місяць </span>
-                        </div>
-                        <div class="calc__input">
-                            <span class="calc__input-icon">
-                                <i class="fas fa-hourglass-half"></i>
-                            </span>
-                            <input type="number" id="work-hour_official" placeholder="8" disabled>
-                            <span class="calc__input-text"> Скільки годин в робочому дні </span>
-                        </div>
-                        <div>
-                            <button onclick="calculateOfficialSalary()" id="result__btn" class="result__btn">
-                                Розрахувати
-                            </button>
-                        </div>
+                <!-- Block of official calculation -->
+                <div id="calc-official" class="calc-container" style="display: block;">
+                    <div class="calc__title">
+                        Калькулятор офіційної зарплати
                     </div>
-                    <!-- END Block of official calculation -->
+                    <div class="calc__input">
+                        <span class="calc__input-icon">
+                            <i class="fas fa-wallet"></i>
+                        </span>
+                        <input type="number" id="full-salary_official" placeholder="6500">
+                        <span class="calc__input-text"> Оклад в місяць </span>
+                    </div>
+                    <div class="calc__input">
+                        <span class="calc__input-icon">
+                            <i class="fas fa-calendar-alt"></i>
+                        </span>
+                        <input type="number" id="work-days_official" placeholder="21">
+                        <span class="calc__input-text"> Кількість робочих днів в місяць </span>
+                    </div>
+                    <div class="calc__input">
+                        <span class="calc__input-icon">
+                            <i class="fas fa-hourglass-half"></i>
+                        </span>
+                        <input type="number" id="work-hour_official" placeholder="8" disabled>
+                        <span class="calc__input-text"> Скільки годин в робочому дні </span>
+                    </div>
+                    <div>
+                        <button onclick="calculateOfficialSalary()" id="result__btn" class="result__btn">
+                            Розрахувати
+                        </button>
+                    </div>
+                </div>
+                <!-- END Block of official calculation -->
 
-                    <!-- Block of NON-official calculation -->
-                    <div id="calc-non-official" class="calc-container" style="display: none;">
-                        <div class="calc__title">
-                            Калькулятор зарплати в конверті
-                        </div>
-                        <div class="calc__input">
-                            <span class="calc__input-icon">
-                                <i class="fas fa-wallet"></i>
-                            </span>
-                            <input type="number" id="full-salary_non-official" placeholder="6500">
-                            <span class="calc__input-text"> Оклад в місяць </span>
-                        </div>
-                        <div class="calc__input">
-                            <span class="calc__input-icon">
-                                <i class="fas fa-calendar-alt"></i>
-                            </span>
-                            <input type="number" id="work-days_non-official" placeholder="21">
-                            <span class="calc__input-text"> Кількість робочих днів в місяць </span>
-                        </div>
-                        <div class="calc__input">
-                                <span class="calc__input-icon">
-                                    <i class="fas fa-business-time"></i>
-                                </span>
-                                <input type="number" id="used-work-days_non-official" placeholder="19">
-                                <span class="calc__input-text"> Кількість відпрацьованих днів </span>
-                            </div>
-                        <div class="calc__input">
-                            <span class="calc__input-icon">
-                                <i class="fas fa-hourglass-half"></i>
-                            </span>
-                            <input type="number" id="work-hour_non-official" placeholder="8" disabled>
-                            <span class="calc__input-text"> Скільки годин в робочому дні </span>
-                        </div>
-                        <div>
-                            <button onclick="calculateNonOfficialSalary()" id="result__btn" class="result__btn">
-                                Розрахувати
-                            </button>
-                        </div>
+                <!-- Block of NON-official calculation -->
+                <div id="calc-non-official" class="calc-container" style="display: none;">
+                    <div class="calc__title">
+                        Калькулятор зарплати в конверті
                     </div>
-                    <!-- END Block of NON-official calculation -->
+                    <div class="calc__input">
+                        <span class="calc__input-icon">
+                            <i class="fas fa-wallet"></i>
+                        </span>
+                        <input type="number" id="full-salary_non-official" placeholder="6500">
+                        <span class="calc__input-text"> Оклад в місяць </span>
+                    </div>
+                    <div class="calc__input">
+                        <span class="calc__input-icon">
+                            <i class="fas fa-calendar-alt"></i>
+                        </span>
+                        <input type="number" id="work-days_non-official" placeholder="21">
+                        <span class="calc__input-text"> Кількість робочих днів в місяць </span>
+                    </div>
+                    <div class="calc__input">
+                        <span class="calc__input-icon">
+                            <i class="fas fa-business-time"></i>
+                        </span>
+                        <input type="number" id="used-work-days_non-official" placeholder="19">
+                        <span class="calc__input-text"> Кількість відпрацьованих днів </span>
+                    </div>
+                    <div class="calc__input">
+                        <span class="calc__input-icon">
+                            <i class="fas fa-hourglass-half"></i>
+                        </span>
+                        <input type="number" id="work-hour_non-official" placeholder="8" disabled>
+                        <span class="calc__input-text"> Скільки годин в робочому дні </span>
+                    </div>
+                    <div>
+                        <button onclick="calculateNonOfficialSalary()" id="result__btn" class="result__btn">
+                            Розрахувати
+                        </button>
+                    </div>
+                </div>
+                <!-- END Block of NON-official calculation -->
             </section>
         </main>
     </div>
