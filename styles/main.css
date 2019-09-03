@@ -81,3 +81,24 @@ input[type=number]::-webkit-inner-spin-button {
     color: rgb(228, 228, 228);
 }
 
+
+@media screen and (max-width: 1023px) {
+    .main{
+        width: 100%;
+    }
+
+    .calc-container{
+        width: 90%;
+    }
+}
+
+@media screen and (max-width: 767px){
+    .calc__input .calc__input-text{
+        font-size: 15px;
+    }
+
+    input[type=number]{
+        font-size: 15px;
+    }
+    
+}
