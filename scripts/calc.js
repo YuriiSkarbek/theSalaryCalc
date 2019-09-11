@@ -92,7 +92,7 @@ workDays_nonOfficial.oninput = function () {
 
 // Modal with the result of the calculation
 var modal = document.getElementById("result__modal");
-var btn = document.getElementById("result__btn");
+var btn = document.getElementById("result-btn");
 var close = document.getElementsByClassName("close")[0];
 
 close.onclick = function () {

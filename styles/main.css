@@ -4,8 +4,12 @@
     width: 65%;
 }
 
+.content{
+    
+}
+
 .calc-container {
-    width: auto;
+    width: fit-content; 
     margin: 0 auto;
     padding: 20px 0;
 }
