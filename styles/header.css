@@ -29,22 +29,9 @@ header {
     line-height: 1.2em;
 }
 
-#exchange-rates {
-    display: none;
-    font-size: 14px;
-    margin: 0 50px 0 10px;
-}
-
 
 @media screen and (max-width: 1023px){
     .logo{
         margin: 0 10px 0 70px;
-    }
-}
-
-@media screen and (max-width: 480px) {
-    #exchange-rates {
-        display: none;
-        /* also exchange rates dont loading by main.js */
     }
 }

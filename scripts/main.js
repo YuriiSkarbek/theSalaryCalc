@@ -4,7 +4,6 @@ let exchangeRatesApiUrl = 'https://api.privatbank.ua/p24api/pubinfo?json&exchang
 fetch(exchangeRatesApiUrl)
     .then(res => res.json())
     .then((exchangeRatesData) => {
-        if(screen.width >= 480){
             var EUR_sale = parseFloat(exchangeRatesData[1].sale).toFixed(2);
             var EUR_buy = parseFloat(exchangeRatesData[1].buy).toFixed(2);
             document.getElementById('exchangerate-EUR-sale').innerHTML = EUR_sale;
@@ -20,12 +19,8 @@ fetch(exchangeRatesApiUrl)
             document.getElementById('exchangerate-RUR-sale').innerHTML = RUR_sale;
             document.getElementById('exchangerate-RUR-buy').innerHTML = RUR_buy;
     
-            // show exchange rates in header if request was success
+            // show exchange rates in sidebar if request was success
             document.getElementById('exchange-rates').style.display = 'block';
-        }
-        else{
-            console.log('exchange rates wasn\'t loading, because your screen width smaller than 480px ')
-        }
     }).catch(err => {
         console.error('cannot get exchange rates from PrivatBank APi. Error:', err)
         document.getElementById('exchange-rates').style.display = 'none';

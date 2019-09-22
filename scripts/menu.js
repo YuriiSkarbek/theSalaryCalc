@@ -6,7 +6,7 @@ function getOfficialSalary() {
     document.getElementById("calc-official").style.display = 'block';
     document.getElementById("calc-non-official").style.display = 'none';
 
-    closeSidebar()
+    closeSidebar();
 }
 
 function getNonOfficialSalary() {
@@ -16,7 +16,7 @@ function getNonOfficialSalary() {
     document.getElementById("calc-non-official").style.display = 'block';
     document.getElementById("calc-official").style.display = 'none';
     if(window.innerWidth <= 1023){
-        closeSidebar()
+        closeSidebar();
     }
     
 }
@@ -25,17 +25,18 @@ function getNonOfficialSalary() {
 // fuction for opening and closing sidebar
 var isSideBarOpen = false;
 function openSidebar() {
+    document.getElementById("sidebar").style.left = "0";
     if (window.innerWidth <= 420) {
         document.getElementById("sidebar").style.width = "100%";
     } else {
-        document.getElementById("sidebar").style.width = "300px";
+        document.getElementById("sidebar").style.width = "320px";
     }
     isSideBarOpen = true;
 }
 
 function closeSidebar() {
     if(window.innerWidth <= 1023){
-        document.getElementById("sidebar").style.width = "0";
+        document.getElementById("sidebar").style.left = "-110%";
         isSideBarOpen = false;
     }
 

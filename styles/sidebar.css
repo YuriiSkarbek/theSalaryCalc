@@ -1,3 +1,4 @@
+/* This file included styles for sidebar */
 .sidebar {
     width: 25%;
     display: flex;
@@ -50,7 +51,7 @@
     color: rgb(255, 255, 255);
 }
 
-.sidebar__toggle-btn{
+.sidebar__toggle-btn {
     display: none;
     background-color: rgb(235, 235, 235);
     color: rgb(83, 83, 83);
@@ -66,8 +67,17 @@
     user-select: none;
 }
 
-.sidebar__toggle-btn:hover{
+.sidebar__toggle-btn:hover {
     background-color: rgb(224, 224, 224);
+}
+
+/* Style for exchange rates */
+
+#exchange-rates {
+    display: none;
+    font-size: 16px;
+    padding-top: 20px;
+    color: rgba(75, 75, 75, 0.705);
 }
 
 @media screen and (max-width: 1023px) {
@@ -75,32 +85,29 @@
     /* The side navigation menu */
     .sidebar {
         height: 100%;
-        width: 0;
+        width: 320px;
         position: fixed;
         z-index: 1000;
         top: 0;
-        left: 0;
+        left: -110%;
         background-color: rgb(44, 44, 44);
         overflow-x: hidden;
         padding-top: 70px;
         transition: 0.3s;
+        -webkit-box-shadow: 3px 0px 10px 0px rgba(140, 140, 140, 1);
+        -moz-box-shadow: 3px 0px 10px 0px rgba(140, 140, 140, 1);
+        box-shadow: 3px 0px 10px 0px rgba(140, 140, 140, 1);
     }
 
     .sidebar__btn {
         width: 100%;
     }
 
-    .sidebar__toggle-btn{
+    .sidebar__toggle-btn {
         display: block;
     }
 
-
-}
-
-@media screen and (max-width: 767px) {
-
-}
-
-@media screen and (max-width: 480px) {
-    
+    #exchange-rates {
+        color: rgba(255, 255, 255, 0.705);
+    }
 }
