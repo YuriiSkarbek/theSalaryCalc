@@ -12,6 +12,15 @@ var workDays_nonOfficial = document.getElementById("work-days_non-official");
 var usedWorkDays_nonOfficial = document.getElementById("used-work-days_non-official")
 var workHour_nonOfficial = document.getElementById("work-hour_non-official");
 
+// inputs from hourly calculator
+var hourRate_hourly = document.getElementById("hour-rate_hourly");
+var workHour_hourly = document.getElementById("work-hour_hourly");
+
+// inputs from fop calculator
+var fullSalary_fop = document.getElementById("full-salary_fop");
+var esv_fop = document.getElementById("esv_fop");
+var tax_fop = document.getElementById("tax_fop");
+
 // init areas on modal for insert result
 var modalFullSalary = document.getElementById("modal-fullSalary");
 var modalUsedDaysWork = document.getElementById("modal-usedDaysWork")
@@ -69,6 +78,22 @@ function calculateNonOfficialSalary() {
 	
 }
 
+function calculateHourlySalary() {
+	var salaryOnHands = workHour_hourly.value * hourRate_hourly.value;
+	modalFullSalary.innerHTML = salaryOnHands.toFixed(2);
+	modalSalaryOnHands.innerHTML = salaryOnHands.toFixed(2);
+	modal.style.display = "block";
+
+}
+
+function calculateFopSalary() {
+	var taxForSalary = fullSalary_fop.value / 100 * tax_fop.value;
+	var salaryOnHands = fullSalary_fop.value - taxForSalary;
+	salaryOnHands = salaryOnHands - esv_fop.value;
+	modalFullSalary.innerHTML = fullSalary_fop.value;
+	modalSalaryOnHands.innerHTML = salaryOnHands.toFixed(2);
+	modal.style.display = "block";
+}
 
 
 // you can't enter the workHour if workDays is null

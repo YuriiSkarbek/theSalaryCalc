@@ -46,6 +46,16 @@
                             Калькулятор зарплати в конверті
                         </span>
                     </div>
+                    <div id="calc-hourly__btn" class="sidebar__btn" onclick="getHourlySalary()">
+                        <span class="sidebar__btn-text">
+                            Калькулятор погодинної оплати
+                        </span>
+                    </div>
+                    <div id="calc-fop__btn" class="sidebar__btn" onclick="getFopSalary()">
+                        <span class="sidebar__btn-text">
+                            Калькулятор зарплати ФОП
+                        </span>
+                    </div>
                 </div>
             </div>
             <div id="exchange-rates">
@@ -133,6 +143,67 @@
                     </div>
                 </div>
                 <!-- END Block of NON-official calculation -->
+
+                <!-- Block of hourly-rate calculation -->
+                <div id="calc-hourly" class="calc-container" style="display: none;">
+                    <div class="calc__title">
+                        Калькулятор зарплати в конверті
+                    </div>
+                    <div class="calc__input">
+                        <span class="calc__input-icon">
+                            <i class="fas fa-wallet"></i>
+                        </span>
+                        <input type="number" id="hour-rate_hourly" placeholder="85">
+                        <span class="calc__input-text"> Рейт в годину </span>
+                    </div>
+                    <div class="calc__input">
+                        <span class="calc__input-icon">
+                            <i class="fas fa-calendar-alt"></i>
+                        </span>
+                        <input type="number" id="work-hour_hourly" placeholder="140">
+                        <span class="calc__input-text"> Кількість відпрацьованих годин за місяць </span>
+                    </div>
+                    <div class="result-btn__wrapper">
+                        <button onclick="calculateHourlySalary()" id="result-btn" class="result-btn">
+                            Розрахувати
+                        </button>
+                    </div>
+                </div>
+                <!-- END Block of hourly-rate calculation -->
+
+                <!-- Block of fop calculation -->
+                <div id="calc-fop" class="calc-container" style="display: none;">
+                    <div class="calc__title">
+                        Калькулятор зарплати в конверті
+                    </div>
+                    <div class="calc__input">
+                        <span class="calc__input-icon">
+                            <i class="fas fa-wallet"></i>
+                        </span>
+                        <input type="number" id="full-salary_fop" placeholder="14800">
+                        <span class="calc__input-text"> Нараховано за місяць </span>
+                    </div>
+                    <div class="calc__input">
+                        <span class="calc__input-icon">
+                            <i class="fas fa-calendar-alt"></i>
+                        </span>
+                        <input type="number" id="esv_fop" placeholder="1100">
+                        <span class="calc__input-text"> ЄСВ </span>
+                    </div>
+                    <div class="calc__input">
+                        <span class="calc__input-icon">
+                            <i class="fas fa-business-time"></i>
+                        </span>
+                        <input type="number" id="tax_fop" placeholder="5">
+                        <span class="calc__input-text"> Відсоток податку </span>
+                    </div>
+                    <div class="result-btn__wrapper">
+                        <button onclick="calculateFopSalary()" id="result-btn" class="result-btn">
+                            Розрахувати
+                        </button>
+                    </div>
+                </div>
+                <!-- END Block of fop calculation -->
             </section>
         </main>
     </div>
@@ -161,7 +232,7 @@
     <!-- Block of footer -->
     <footer class="footer">
         
-        <a href="https://www.linkedin.com/in/yurii-skarbek/" target="_blank">Skarbek Yurii</a> <span>⠀©⠀2019 </span>
+        <a href="https://www.linkedin.com/in/yurii-skarbek/" target="_blank">Skarbek Yurii</a> <span>⠀©⠀2021 </span>
     </footer>
     <!-- END Block of footer -->
     <script src="scripts/main.js"></script>

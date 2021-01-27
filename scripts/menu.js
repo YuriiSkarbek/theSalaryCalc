@@ -2,9 +2,13 @@
 function getOfficialSalary() {
     document.getElementById("calc-official__btn").classList.add("sidebar__btn-active");
     document.getElementById("calc-non-official__btn").classList.remove("sidebar__btn-active");
+    document.getElementById("calc-hourly__btn").classList.remove("sidebar__btn-active");
+    document.getElementById("calc-fop__btn").classList.remove("sidebar__btn-active");
 
     document.getElementById("calc-official").style.display = 'block';
     document.getElementById("calc-non-official").style.display = 'none';
+    document.getElementById("calc-hourly").style.display = 'none';
+    document.getElementById("calc-fop").style.display = 'none';
 
     closeSidebar();
 }
@@ -12,13 +16,41 @@ function getOfficialSalary() {
 function getNonOfficialSalary() {
     document.getElementById("calc-non-official__btn").classList.add("sidebar__btn-active");
     document.getElementById("calc-official__btn").classList.remove("sidebar__btn-active");
+    document.getElementById("calc-hourly__btn").classList.remove("sidebar__btn-active");
+    document.getElementById("calc-fop__btn").classList.remove("sidebar__btn-active");
 
     document.getElementById("calc-non-official").style.display = 'block';
     document.getElementById("calc-official").style.display = 'none';
-    if(window.innerWidth <= 1023){
-        closeSidebar();
-    }
+    document.getElementById("calc-hourly").style.display = 'none';
+    document.getElementById("calc-fop").style.display = 'none';
+    closeSidebar();
     
+}
+
+function getHourlySalary() {
+    document.getElementById("calc-hourly__btn").classList.add("sidebar__btn-active");
+    document.getElementById("calc-non-official__btn").classList.remove("sidebar__btn-active");
+    document.getElementById("calc-official__btn").classList.remove("sidebar__btn-active");
+    document.getElementById("calc-fop__btn").classList.remove("sidebar__btn-active");
+
+    document.getElementById("calc-non-official").style.display = 'none';
+    document.getElementById("calc-official").style.display = 'none';
+    document.getElementById("calc-hourly").style.display = 'block';
+    document.getElementById("calc-fop").style.display = 'none';
+    closeSidebar();
+}
+
+function getFopSalary() {
+    document.getElementById("calc-hourly__btn").classList.remove("sidebar__btn-active");
+    document.getElementById("calc-non-official__btn").classList.remove("sidebar__btn-active");
+    document.getElementById("calc-official__btn").classList.remove("sidebar__btn-active");
+    document.getElementById("calc-fop__btn").classList.add("sidebar__btn-active");
+
+    document.getElementById("calc-non-official").style.display = 'none';
+    document.getElementById("calc-official").style.display = 'none';
+    document.getElementById("calc-hourly").style.display = 'none';
+    document.getElementById("calc-fop").style.display = 'block';
+    closeSidebar();
 }
 
 
